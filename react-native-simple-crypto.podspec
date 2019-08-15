@@ -2,7 +2,7 @@ require 'json'
 package_json = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
-  s.name          = package_json["name"]
+  s.name          = "react-native-simple-crypto"
   s.version       = package_json["version"]
   s.summary       = package_json["description"]
   s.author        = package_json["author"]
