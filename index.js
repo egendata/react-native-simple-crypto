@@ -89,7 +89,7 @@ function randomBytes(length) {
   });
 }
 
-const AES = {
+export const AES = {
   encrypt: function(textArrayBuffer, keyArrayBuffer, ivArrayBuffer) {
     const textString = convertArrayBufferToUtf8(textArrayBuffer);
     const keyHex = convertArrayBufferToHex(keyArrayBuffer);
@@ -118,9 +118,9 @@ const AES = {
   }
 };
 
-const SHA = NativeModules.Sha;
+export const SHA = NativeModules.Sha;
 
-const HMAC = {
+export const HMAC = {
   hmac256: function(textArrayBuffer, keyArrayBuffer) {
     const textHex = convertArrayBufferToHex(textArrayBuffer);
     const keyHex = convertArrayBufferToHex(keyArrayBuffer);
@@ -135,7 +135,7 @@ const HMAC = {
   }
 };
 
-const PBKDF2 = {
+export const PBKDF2 = {
   hash: function(password, saltArrayBuffer, iterations, keyLength, hash) {
     const saltBase64 = convertArrayBufferToBase64(saltArrayBuffer);
     return new Promise((resolve, reject) => {
@@ -155,9 +155,9 @@ const PBKDF2 = {
   }
 };
 
-const RSA = NativeModules.Rsa;
+export const RSA = NativeModules.Rsa;
 
-const utils = {
+export const utils = {
   randomBytes: randomBytes,
   convertArrayBufferToUtf8: convertArrayBufferToUtf8,
   convertUtf8ToArrayBuffer: convertUtf8ToArrayBuffer,
@@ -165,13 +165,4 @@ const utils = {
   convertBase64ToArrayBuffer: convertBase64ToArrayBuffer,
   convertArrayBufferToHex: convertArrayBufferToHex,
   convertHexToArrayBuffer: convertHexToArrayBuffer
-};
-
-export default {
-  AES: AES,
-  SHA: SHA,
-  HMAC: HMAC,
-  PBKDF2: PBKDF2,
-  RSA: RSA,
-  utils: utils
 };

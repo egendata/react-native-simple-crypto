@@ -1,10 +1,15 @@
 {
-  "name": "react-native-simple-crypto",
+  "name": "@egendata/react-native-simple-crypto",
   "version": "0.2.7",
   "description": "A simpler React-Native crypto library",
   "main": "index.js",
-  "author": "Pedro Gomes <pedro@pedrouid.com>",
-  "homepage": "https://github.com/pedrouid/react-native-simple-crypto",
+  "contributors": [
+    "trackforce",
+    "Pedro Gomes <pedro@pedrouid.com>",
+    "iBobo <andrea@bhweb.it>",
+    "Johan Öbrink <johan.obrink@gmail.com>"
+  ],
+  "homepage": "https://github.com/egendata/react-native-simple-crypto",
   "license": "MIT",
   "keywords": [
     "react-native",
@@ -26,13 +31,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedrouid/react-native-simple-crypto.git"
+    "url": "git+https://github.com/egendata/react-native-simple-crypto.git"
   },
   "bugs": {
-    "url": "https://github.com/pedrouid/react-native-simple-crypto/issues"
+    "url": "https://github.com/egendata/react-native-simple-crypto/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "patch-release": "npm version patch && npm publish --access public && git push origin master --follow-tags",
+    "minor-release": "npm version minor && npm publish --access public && git push origin master --follow-tags",
+    "major-release": "npm version major && npm publish --access public && git push origin master --follow-tags"
   },
   "dependencies": {
     "base64-js": "^1.3.0",
