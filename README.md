@@ -1,5 +1,11 @@
 # React Native Simple Crypto
 
+![License](https://flat.badgen.net/github/license/egendata/react-native-simple-crypto)
+![Dependabot](https://flat.badgen.net/dependabot/egendata/react-native-simple-crypto?icon=dependabot)
+![Travis CI](https://flat.badgen.net/travis/egendata/react-native-simple-crypto?icon=travis)
+![Github release](https://flat.badgen.net/github/release/egendata/react-native-simple-crypto?icon=github)
+![npm version](https://flat.badgen.net/npm/v/@egendata/react-native-simple-crypto?icon=npm)
+
 A simpler React-Native crypto library
 
 This is a fork of [react-native-crypto](https://github.com/pedrouid/react-native-simple-crypto)
